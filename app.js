@@ -1,5 +1,5 @@
 const express = require('express');
-const mongoose = require('mongoose')
+const mongoose = require('mongoose');
 const app = express();
 
 if(process.env.ENV === 'Test'){
@@ -17,12 +17,18 @@ app.use(bodyParser.json());
 
 app.use('/api', bookRouter);
 
-app.get('/', (req, res) => {
-    res.send('Welcome to my API');
+app.get('/status', (req, res) => {
+    const localTime = (new Date()).toLocaleDateString();
+    res.status(200)
+        .send(`Server time is ${localTime}`);
+});
+
+app.get('*', (req, res) => {
+    res.sendStatus(404);
 });
 
 app.server = app.listen(port, ()=>{
-   console.log(`poootas ${port}`);
+   console.log(`Server is running in port: ${port}`);
 });
 
 module.exports = app;
