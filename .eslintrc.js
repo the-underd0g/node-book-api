@@ -1,33 +1,10 @@
 module.exports = {
+	'extends': 'airbnb-base',
 	'env': {
-		'browser': true,
-		'commonjs': true,
-		'es6': true
-	},
-	'extends': 'eslint:recommended',
-	'globals': {
-		'Atomics': 'readonly',
-		'SharedArrayBuffer': 'readonly'
-	},
-	'parserOptions': {
-		'ecmaVersion': 2018
+		"node": true,
+		"mocha": true,
 	},
 	'rules': {
-		'indent': [
-			'error',
-			'tab'
-		],
-		'linebreak-style': [
-			'error',
-			'unix'
-		],
-		'quotes': [
-			'error',
-			'single'
-		],
-		'semi': [
-			'error',
-			'always'
-		]
+		"comma-dangle" :0
 	}
 };
