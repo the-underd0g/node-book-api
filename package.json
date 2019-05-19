@@ -12,20 +12,21 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.0",
+    "mongoose": "^5.5.9",
     "nodemon": "^1.19.0"
   },
   "devDependencies": {
     "eslint": "^5.16.0"
   },
-  "nodemonConfig" : {
-    "restartable" : "rs",
+  "nodemonConfig": {
+    "restartable": "rs",
     "ignore": [
       "node_modules/**/node_modules"
     ],
-    "delay" : "2500",
-    "env" : {
-      "NODE_ENV" : "development",
-      "PORT" : 4000
+    "delay": "2500",
+    "env": {
+      "NODE_ENV": "development",
+      "PORT": 4000
     }
   }
 }
